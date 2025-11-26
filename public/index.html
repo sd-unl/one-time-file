@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Time File Transfer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h2>Upload One-Time File</h2>
+        <p class="subtitle">Max size: 1MB. File is deleted after download.</p>
+        
+        <div class="upload-area">
+            <input type="file" id="fileInput">
+        </div>
+
+        <button onclick="uploadFile()" id="uploadBtn">Get One-Time Link</button>
+        
+        <div id="loader" class="hidden">Uploading...</div>
+
+        <div id="result" class="hidden">
+            <p>Your one-time download link:</p>
+            <div class="link-box">
+                <input type="text" id="linkOutput" readonly>
+                <button onclick="copyLink()">Copy</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
